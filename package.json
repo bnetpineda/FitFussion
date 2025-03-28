@@ -2,7 +2,7 @@
   "name": "FitFusion",
   "version": "1.0.0",
   "scripts": {
-    "start": "concurrently \"npm run start-backend\" \"npm run start-frontend\"",
+    "run vercel-build": "concurrently \"npm run start-backend\" \"npm run start-frontend\"",
     "start-backend": "cd backend && python manage.py runserver",
     "start-frontend": "cd frontend && npm start",
     "build": "cd frontend && npm run build",
