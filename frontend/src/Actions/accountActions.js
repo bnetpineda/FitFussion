@@ -31,7 +31,7 @@ import {
 } from "../Constants/accountConstants";
 import axios from "axios";
 
-const API_BASE_URL = 'https://fitfusion-web.vercel.app';
+const API_BASE_URL = 'https://backendfitfussion-production.up.railway.app';
 
 export const addAccount = (account) => async (dispatch) => {
   try {
@@ -40,9 +40,9 @@ export const addAccount = (account) => async (dispatch) => {
     });
 
     const { data } = await axios.post(
-      "http://127.0.0.1:8000/auth/register/",
+      `${API_BASE_URL}/auth/register/`,
       account
-    ); //create a new product
+    );
 
     dispatch({
       type: ACCOUNT_ADD_SUCCESS,
